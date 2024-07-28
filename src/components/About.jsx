@@ -10,7 +10,7 @@ const About = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('https://url-shorter-server.vercel.app/api/shorten', { originalUrl });
+      const response = await axios.post('http://localhost:5000/api/shorten', { originalUrl });
       setShortUrl(response.data.shortUrl);
     } catch (err) {
       if (err.response && err.response.data) {
